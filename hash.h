@@ -25,3 +25,18 @@ typedef struct HashTable
     size_t size;
     HashFunc func;
 }HashTable;
+
+//初始化
+void HashInit(HashTable* hashtable,HashFunc hash_func);
+
+//销毁
+void HashDestroy(HashTable* hashtable);
+
+//插入
+void HashInsert(HashTable* hashtable,KeyType key,ValueType value);
+
+//查找
+int HashFind(HashTable* hashtable,KeyType key,ValueType* value);
+
+//删除
+void HashRemove(HashTable* hashtable,KeyType key);
